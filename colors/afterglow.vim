@@ -1,4 +1,4 @@
-" Origin: 
+" Origin:
 " File: afterglow.vim
 " Author: Danilo Augusto
 " Date: 2017-02-27
@@ -33,7 +33,7 @@ let s:blue = "6c99bb"
 let s:val = "d0d0ff"
 let s:wine = "b05279"
 let s:purple = "9e86c8"
-let s:window = "4d5057"
+let s:window = "3a3a3a"
 
 " Auxiliar colors
 let s:black = "000000"
@@ -325,6 +325,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
     syntax match commonOperator "\(+\|=\|-\|*\|\^\|\/\||\)"
     hi! link commonOperator Operator
+    
+    " Coc Highlighting
+    call <SID>X("CocFloating", "", s:window, "")
 
     " Vim Highlighting
     call <SID>X("vimCommand", s:brown, "", "NONE")
